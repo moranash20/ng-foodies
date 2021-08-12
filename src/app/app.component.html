@@ -1,3 +1,7 @@
 <div class="app">
-  <button type="button" (click)="sigInWithGoogle()">Login</button>
+  <app-header></app-header>
+  <main>
+    <app-sidebar></app-sidebar>
+    <router-outlet></router-outlet>
+  </main>
 </div>

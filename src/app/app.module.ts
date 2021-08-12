@@ -11,10 +11,17 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { RecipesComponent } from './recipes/recipes.component';
+import { RecipesContainerComponent } from './recipes/Components/recipes-container/recipes-container.component';
+import { RecipeComponent } from './recipes/Components/recipe/recipe.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SidebarComponent, RecipesComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    SidebarComponent,
+    RecipesContainerComponent,
+    RecipeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

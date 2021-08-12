@@ -1,1 +1,31 @@
+<div class="header">
+  <mat-toolbar color="primary">
+    <span>Foodies</span>
+    <span class="header__spacer"></span>
+    <button
+      mat-icon-button
+      (click)="sigInWithGoogle()"
+      *ngIf="!(isLogedIn$ | async); else loggedIn"
+    >
+      Login
+    </button>
 
+    <ng-template #loggedIn>
+      <button
+        class="favorite-button"
+        mat-raised-button
+        matTooltip="favorites"
+        aria-label="Button that displays a tooltip when focused or hovered over"
+      >
+        <button
+          mat-icon-button
+          class="example-icon favorite-icon"
+          aria-label="Example icon-button with heart icon"
+        >
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </button>
+      <button mat-icon-button (click)="signout()">Logout</button>
+    </ng-template>
+  </mat-toolbar>
+</div>
